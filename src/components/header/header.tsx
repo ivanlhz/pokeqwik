@@ -1,9 +1,10 @@
 import ImgLogo from "~/media/logo.png?jsx";
 import { component$ } from "@builder.io/qwik";
+import type {Pokemon} from "~/domain";
 
-export default component$(() => {
+export default component$<Pokemon>(() => {
   return (
-    <header class="navbar bg-base-100">
+    <header class="navbar bg-neutral sticky top-0 z-10">
       <div class="flex-1">
         <div class="w-10 rounded-full">
           <ImgLogo alt="PokeQwik Logo" />
@@ -11,15 +12,6 @@ export default component$(() => {
         <h1 class="text-2xl font-bold ml-5">
           Poke<span class="text-sky-500">Qwik</span>
         </h1>
-      </div>
-      <div class="flex-none gap-2">
-        <div class="form-control">
-          <input type="text"
-            placeholder="Search"
-            class="input input-bordered w-24 md:w-auto"
-          />
-        </div>
-        <div class="dropdown dropdown-end"></div>
       </div>
     </header>
   );

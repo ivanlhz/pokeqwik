@@ -10,11 +10,10 @@ export class GetPokemonsHttpService implements GetPokemonsRepository {
   };
 
   getPokemons = async (offset: number, limit: number) => {
-    const url = `${this.apiURL}/pokemon/?offset=${offset}&limit${limit}`;
+    const url = `${this.apiURL}/pokemon/?offset=${offset}&limit=${limit}`;
     const response = await fetch(url);
-    const pokemonsRaw = (await response.json()) as PokemonRaw[];
-    console.log(pokemonsRaw);
-    const promises = pokemonsRaw.results.map(
+    const pokemonsRaw = (await response.json()).results as PokemonRaw[];
+    const promises = pokemonsRaw.map(
       async ({ name }) => await this.getPokemonById(name),
     );
     return (await Promise.all(promises)) as Pokemon[];
