@@ -3,7 +3,6 @@ import {
   Resource,
   useResource$,
   useSignal,
-  useStore,
 } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import Pokecard from "~/components/pokecard/pokecard";
