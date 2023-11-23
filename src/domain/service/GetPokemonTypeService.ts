@@ -4,7 +4,7 @@ import type { GetPokemonTypeRepository } from "../repository/GetPokemonTypeRepos
 export class GetPokemonTypeService {
   constructor(private typeGetter: GetPokemonTypeRepository) {}
 
-  getType(id: number): Promise<PokemonType> {
+  getType(id: string): Promise<PokemonType> {
     return this.typeGetter.getType(id);
   }
 }

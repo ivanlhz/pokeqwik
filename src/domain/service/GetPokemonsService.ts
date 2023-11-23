@@ -8,7 +8,7 @@ export class GetPokemonService {
     return this.pokemonsGetter.getPokemons(offset, limit);
   }
 
-  getPokemonById(id: number): Promise<Pokemon> {
+  getPokemonById(id: string): Promise<Pokemon> {
     return this.pokemonsGetter.getPokemonById(id);
   }
 }
