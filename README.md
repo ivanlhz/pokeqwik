@@ -1,6 +1,14 @@
 # PokeQwik App ⚡️
 PokeQwik is a web application designed to showcase the first 150 Pokemon in a paginated format, displaying 30 Pokemon per page. The application is built using the Qwik framework, which provides a fast and efficient rendering system for web applications.
 
+## TODO List
+- [ ] Add integration tests **Vitest?**
+- [ ] Add e2e test using **Cypress**
+- [ ] Implement a search bar
+- [ ] Add pokemon types
+- [ ] Add filter by type
+- [ ] Improve UI and UX
+
 ## Technologies Used:
 
 - **Qwik Framework**: Qwik is chosen for its efficiency in rendering and providing a seamless user experience. It follows a component-based architecture, allowing for the easy organization of different parts of the application.
