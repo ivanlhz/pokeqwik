@@ -1,4 +1,5 @@
-import type { GetPokemonTypeRepository, PokemonType } from "~/domain";
+import type { PokemonType } from "~/model";
+import {GetPokemonTypeRepository} from "~/repository";
 
 export class GetPokemonTypeHttpService implements GetPokemonTypeRepository {
   constructor(private apiURL: string) {}

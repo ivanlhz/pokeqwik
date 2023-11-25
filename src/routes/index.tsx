@@ -7,8 +7,8 @@ import {
 import type { DocumentHead } from "@builder.io/qwik-city";
 import Pokecard from "~/components/pokecard/pokecard";
 import { API_URL } from "~/config";
-import type { Pokemon } from "~/domain";
-import { GetPokemonsHttpService } from "~/infrastructure/GetPokemonsHttpService";
+import type { Pokemon } from "~/model";
+import { GetPokemonsHttpService } from "~/service/GetPokemonsHttpService";
 
 export default component$(() => {
   const itemsPerPage = 30;
